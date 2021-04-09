@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  font-family: 'Avenir';
+  font-size: 10px;
+  box-sizing: border-box;
+  &:focus { outline: none; }
+}
+html, body { height: 100%; width: 100%; }
+
+.row { display: flex; flex-direction: row; }
+.col { display: flex; flex-direction: column; }
+
+$directions : (start: flex-start, end: flex-end, center: center, space-between: space-between, space-around: space-around);
+@each $key, $value in $directions {
+  .justify-#{$key} {
+    justify-content: $value;
+  }
+  .align-#{$key} {
+    align-items: $value;
+  }
+}
+
+@for $value from 1 through 100 {
+  $percent: $value / 100;
+  .w-#{$value} {
+    width: percentage($percent);
+  }
+  .h-#{$value} {
+    height: percentage($percent);
+  }
+}

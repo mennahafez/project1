@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="album-container">
+    <h1>Welcome to the music studio</h1>
+    <div class="album-wrapper">
+      <div *ngFor="let album of albums" class="album">
+        <img [src]="album.img">
+        <button (click)="playTune(album.song)">&#9658;</button>
+      </div>
+    </div>
+  </div>
+  <button class="start" (click)="toStudio()">START RECORDING</button>
+</div>

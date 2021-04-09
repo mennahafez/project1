@@ -1,0 +1,53 @@
+@import '../../styles/variables';
+
+.container {
+  height: inherit; width: 100%;
+  display: flex; flex-direction: column;
+  .album-container {
+    height: inherit; width: 100%;
+    display: flex; flex-direction: row;
+    h1 {
+      font-size: 15rem;
+      padding: 2rem;
+    }
+    .album-wrapper {
+      height: 100%; width: 100%;
+      display: flex; flex-direction: column;
+      align-items: flex-end;
+      .album {
+        flex-grow: 1;
+        margin: 3rem 0;
+        height: 50%; width: 100%;
+        display: flex; flex-direction: row;
+        justify-content: space-around; align-items: center;
+        img {
+          height: 600px;
+        }
+        button {
+          border: none;
+          border-radius: 50%;
+          background: $purple;
+          height: 5rem;
+          width: 5rem;
+          color: white;
+          font-size: 2rem;
+          &:hover {
+            background: $red
+          }
+        }
+      }
+    }
+  }
+  .start {
+    background: $black;
+    color: white;
+    border: none;
+    width: 100%;
+    height: 5rem;
+    font-size: 3rem;
+    text-align: center;
+    &:hover {
+      background: $red
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import '../../styles/variables';
+
+.computer {
+  height: 100%; width: 100%;
+  background-color: $black;
+  padding: 5rem;
+  position: relative;
+  .text {
+    padding: 2rem;
+    height: 100%; width: 100%;
+    background-color: $off-white;
+    overflow: auto;
+    &.bg-black-black { background-color: black }
+    > * {
+      margin-bottom: 2.5rem;
+      font-size: 5rem;
+    }
+    .big {
+      font-size: 10rem;
+      font-weight: bold;
+    }
+    .strong {
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+  }
+  .buttons {
+    position: absolute;
+    bottom: 0; right: 0;
+    margin-right: 5rem;
+    display: flex; flex-direction: row;
+    justify-content: space-between; align-items: center;
+    width: 10%; height: 5rem;
+    .text-buttons {
+      font-size: 3rem;
+      color: white;
+    }
+    .small-circle {
+      height: 1rem; width: 1rem;
+      background-color: white;
+      border-radius: 50%;
+    }
+    .large-circle {
+      height: 2.5rem; width: 2.5rem;
+      background-color: red;
+      border-radius: 50%;
+    }
+  }
+}

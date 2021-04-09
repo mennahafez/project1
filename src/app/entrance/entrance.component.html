@@ -1,0 +1,22 @@
+<div class="h-100 w-100 bg-black">
+  <div class="h-100 w-100 row justify-center align-center" (click)="open()" style="overflow: hidden">
+    <div class="door left" [ngClass]="{'transform-left': openDoors}">
+      <div class="door-panel"></div>
+      <div class="door-panel"></div>
+      <div class="door-panel"></div>
+      <div class="door-sign">
+        <div class="sign">Recording Music Studio</div>
+      </div>
+    </div>
+    <div class="door right" [ngClass]="{'transform-right': openDoors}">
+      <div class="door-panel"></div>
+      <div class="door-panel"></div>
+      <div class="door-panel">
+        <div class="door-sign">
+          <div class="sign">
+            <div>NO ENTRY ALLOWED except for Artists</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
